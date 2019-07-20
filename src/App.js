@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import dataSource from './data/dataSource.json';
 import About from './components/About';
 import ProjectList from './components/ProjectList.jsx';
+import WorkList from './components/WorkList.jsx';
 
 
 function App() {
@@ -17,28 +18,9 @@ function App() {
 
   return (
     <React.Fragment>
-      <About {...data.about}/>
-      <ProjectList items={data.projects}/>
-
-      <h2>Examples</h2>
-      <ul>
-        {data.jobs.map(item => (
-          <li key={item.id}>
-            <h3>{item.project}</h3>
-            <h4>{item.company}</h4>
-            <p>{item.description}</p>
-            <ul>
-              {item.technologies.map((item,index) => (
-                <li key={index}>
-                  <h5>{item}</h5>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
-
-
+      {data.about && <About {...data.about} />}
+      {data.work && <ProjectList items={data.projects} />}
+      {data.work && <WorkList items={data.work} />}
     </React.Fragment>
   );
 }
