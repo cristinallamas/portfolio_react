@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import dataSource from './data/dataSource.json';
+import About from './components/About';
 
 
 function App() {
@@ -15,12 +16,7 @@ function App() {
 
   return (
     <React.Fragment>
-
-      <h2>About</h2>
-      <h3>{data.about.name}</h3>
-      <h4>{data.about.title}</h4>
-      <p>{data.about.bio}</p>
-      <a href="../{data.about.bio}">Download my CV</a>
+      <About {...data.about}/>
 
       <h2>Examples</h2>
       <ul>
