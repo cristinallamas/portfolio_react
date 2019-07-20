@@ -1,24 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+
+import dataSource from './data/dataSource.json';
+
 
 function App() {
   // Declare a new state variable, which we'll call "data".
   const [data, setData] = useState({ projects: [],jobs:[],about:{} });
-
+  
   // Used "as" componentDidMount.
   useEffect(() => {
-    const fetchData = async () => {
-      await axios.get('http://localhost:8000/data')
-      .then(response => {
-      // console.log(response);
-      setData(response.data);
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data', error);
-      });
-      
-    };
-    fetchData();
+    // console.log(dataSource.data);
+    setData(dataSource.data);
   }, []);
 
   return (
