@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import dataSource from './data/dataSource.json';
 import About from './components/About';
+import ProjectList from './components/ProjectList.jsx';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <React.Fragment>
       <About {...data.about}/>
+      <ProjectList items={data.projects}/>
 
       <h2>Examples</h2>
       <ul>
@@ -36,14 +38,6 @@ function App() {
         ))}
       </ul>
 
-      <h2>Side Projects</h2>
-      <ul>
-        {data.projects.map(item => (
-          <li key={item.id}>
-            <a href={item.url}>{item.title}</a>
-          </li>
-        ))}
-      </ul>
 
     </React.Fragment>
   );
