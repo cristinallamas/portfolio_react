@@ -1,9 +1,12 @@
 import React from "react";
 
-function Work({ project, company, description, technologies }) {
+import Card from './Molecules/Card/Card'
+
+function Work({ project, company, description, technologies, url }) {
   return (
     <React.Fragment>
-      <h3>{project}</h3>
+      
+      <Card title={project} link={url}>
       <h4>{company}</h4>
       <p>{description}</p>
       <ul>
@@ -13,6 +16,8 @@ function Work({ project, company, description, technologies }) {
           </li>
         ))}
       </ul>
+      </Card>
+
     </React.Fragment>
   );
 }

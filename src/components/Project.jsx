@@ -1,8 +1,15 @@
 import React from "react";
 
+import Link from './Atoms/Link/Link'
+import Card from './Molecules/Card/Card'
+
 function Project({title,url}) {
   return (
-    <a href={url}>{title}</a>
+    <Link 
+      href={url}
+      >
+        {title}
+    </Link>
   );
 }
 

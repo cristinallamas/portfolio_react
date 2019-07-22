@@ -1,5 +1,7 @@
 import React from "react";
 
+import Link from '../components/Atoms/Link/Link';
+
 function About({ name, title, bio, cv_source }) {
   return (
     <div>
@@ -7,7 +9,13 @@ function About({ name, title, bio, cv_source }) {
       <h3>{name}</h3>
       <h4>{title}</h4>
       <p>{bio}</p>
-      <a href={`../${cv_source}`}>Download my CV</a>
+      <Link 
+        href={`../${cv_source}`}
+        className="button_link"
+        target="_blank" 
+        >
+          Download my CV
+      </Link>
     </div>
   );
 }
