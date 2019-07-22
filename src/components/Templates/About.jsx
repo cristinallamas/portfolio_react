@@ -1,6 +1,6 @@
 import React from "react";
 
-import Link from '../components/Atoms/Link/Link';
+import Link from '../Atoms/Link/Link';
 
 function About({ name, title, bio, cv_source }) {
   return (

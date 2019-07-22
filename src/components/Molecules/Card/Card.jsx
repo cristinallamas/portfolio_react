@@ -1,8 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+// import styled from 'styled-components'
+// import { space, width, fontSize, color } from 'styled-system'
 
 import Link from "../../Atoms/Link/Link";
 // import './_style.scss';
+// Add styled-system functions to your component
 
 const Card = ({ link, title, className, children }) => (
   <div className={className}>
@@ -18,6 +21,7 @@ Card.propTypes = {
   children: PropTypes.node,
 
 };
+
 
 /**
  * Default props

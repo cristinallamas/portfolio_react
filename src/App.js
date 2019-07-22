@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react";
 // Local imports.
 import dataSource from "./data/dataSource.json";
-import About from "./components/About";
-import ProjectList from "./components/ProjectList.jsx";
-import WorkList from "./components/WorkList.jsx";
+import About from "./components/Templates/About";
+import ProjectList from "./components/Templates/ProjectList";
+import WorkList from "./components/Templates/WorkList";
 
 function App() {
   // Declare a new state variable, which we'll call "data".
