@@ -10,7 +10,7 @@ function About({ name, title, bio, cv_source }) {
       <h4>{title}</h4>
       <p>{bio}</p>
       <Link 
-        href={`../${cv_source}`}
+        href={`./public/${cv_source}`} // TODO: This link reference is not working.
         className="button_link"
         target="_blank" 
         >

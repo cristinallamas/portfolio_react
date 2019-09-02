@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 
-import Work from "../Organisms/WorkItem/WorkItem";
-import List from "../Molecules/List/List";
+import Card from "../Molecules/Card/Card";
 
 const WorkList = ({ items }) => {
   // Reverse array to get latest first. bleh.
@@ -10,7 +9,21 @@ const WorkList = ({ items }) => {
   return (
     <Fragment>
       <h2>Work</h2>
-      <List content={items} component={Work} />
+      {items && (
+        <ul>
+          {items.map((item, index) => (
+            <li key={index}>
+              <Card
+                tag={item.category}
+                title={item.project}
+                link={`/work/${item.id}`}
+                variation="right"
+                description={item.description}
+              />
+            </li>
+          ))}
+        </ul>
+      )}
     </Fragment>
   );
 };

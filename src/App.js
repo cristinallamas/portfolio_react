@@ -1,22 +1,14 @@
 // Dependencies.
-import React, { useState, useEffect } from "react";
+import React from "react";
+// import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-// Local imports.
-// import dataSource from "../../../data/dataSource.json";
-
 import Home from "./components/Pages/Home/Home";
-import Work from "./components/Pages/Work/Work";
+import WorkListPage from "./components/Pages/WorkListPage/WorkListPage";
+import WorkItemPage from "./components/Pages/WorkItemPage/WorkItemPage";
 
 function App() {
-  // // Declare a new state variable, which we'll call "data".
-  // const [data, setData] = useState({ projects: [], jobs: [], about: {} });
-
-  // // Used "as" componentDidMount.
-  // useEffect(() => {
-  //   setData(dataSource.data);
-  // }, []);
 
   return (
     <React.Fragment>
@@ -28,13 +20,10 @@ function App() {
             content="A little bit about me and my work"
           />
         </Helmet>
-
-        {/* <Route
-          exact path="/"
-          render={props => <Home props={data} />}
-        /> */}
+        {/* TODO: bring header here */}
         <Route exact path="/" component={Home} />
-        <Route exact path="/work" component={Work} />
+        <Route exact path="/work" component={WorkListPage} />
+        <Route exact path="/work/:id" component={WorkItemPage}/>
       </Router>
     </React.Fragment>
   );

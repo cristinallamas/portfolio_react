@@ -9,6 +9,7 @@ import Link from "../../Atoms/Link/Link";
 
 const Card = ({
   link,
+
   tag,
   title,
   description,
@@ -21,11 +22,10 @@ const Card = ({
       {tag && <h3>{tag}</h3>}
       {title && <h2>{title}</h2>}
       {description && <p>{description}</p>}
-      {/* <Link href={'/'} >Details</Link> */}
-      <button>Details</button>
+      <Link href={link} >Details</Link>
     </div>
     <div className="right">
-      <img src={picture} />
+      <img alt={title} src={picture} />
     </div>
   </div>
 );
