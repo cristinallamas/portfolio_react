@@ -9,8 +9,6 @@ const ListItem = ({ component, item, className }) => {
       </li>
     );
   }
-
-  return <li className={className}>{item}</li>;
 };
 
 export default ListItem;

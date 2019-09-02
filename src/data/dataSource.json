@@ -1,5 +1,21 @@
 {
   "data": {
+    "header": {
+      "slogan": "Cristina Llamas",
+      "navigation": [
+        {
+          "id": 1,
+          "title": "Work",
+          "url": "/work"
+        },
+        {
+          "id": 2,
+          "title": "Blog",
+          "url": "https://medium.com/@cristinallamas"
+        }
+      ]
+
+    },
     "projects": [
       {
         "id": 1,
@@ -24,7 +40,8 @@
         "company": "ATD Travel Services",
         "url": "http://www.attraction-tickets-direct.co.uk",
         "description": "Drupal 6 module development for the ticket selling multi domain platform, grouping more than 15 websites in a variety of languages. Drupal theming for the various themes used withing the platform for brands like Sea World, Theme Park Beds, Do Something Different, Attraction Tickets Direct.",
-        "technologies": ["Drupal 6", "Drupal 7", "SCSS", "Javascript"]
+        "technologies": ["Drupal 6", "Drupal 7", "SCSS", "Javascript"],
+        "category": "Drupal 6"
       },
       {
         "id": 2,
@@ -32,7 +49,8 @@
         "company": "Catch Digital",
         "url": "https://www.catchdigital.com/",
         "description": "Part of the BBC Goodfood Project Team, developing new features and maintaining their Drupal 7 installation. Campaign landing pages in Drupal for Rimmel London, Facebook integrated contests to gather user data for Sally Hansen",
-        "technologies": ["Drupal 7", "SCSS", "Javascript"]
+        "technologies": ["Drupal 7", "SCSS", "Javascript"],
+        "category": "Drupal 7"
       },
       {
         "id": 3,
@@ -47,7 +65,8 @@
           "SCSS",
           "Webpack",
           "Grunt"
-        ]
+        ],
+        "category": "Drupal & React"
       },
       {
         "id": 4,
@@ -63,7 +82,8 @@
           "SCSS",
           "Webpack",
           "Gulp"
-        ]
+        ],
+        "category": "Component Library"
       },
       {
         "id": 5,
@@ -71,13 +91,15 @@
         "company": "Investis Digital",
         "url": "https://www.ocadogroup.com/",
         "description": "Corporate Site using Investis distribution, based on Brick components. It was required the creation of new components to use side by side with the base ones used by default. Twig, SCSS and Javascript/jQuery was used to implement the required functionality specified in the designs. As a big part of the project it was required the creation of a microsite called The Grid, mimicking Ocado Grid Robots. This was solved by the use of Highcharts library and custom Javascript and Drupal Views with custom twig templates and preprocessing.",
-        "technologies": ["Drupal 8", "Twig", "SCSS", "Javascript", "HighCharts"]
+        "technologies": ["Drupal 8", "Twig", "SCSS", "Javascript", "HighCharts"],
+        "category": "Drupal 8",
+        "featured": true
       }
     ],
     "about": {
       "name": "Cristina Llamas Roman",
-      "title": "Web Developer",
-      "bio": "Freelance Web developer with over 7 years of experience. Proven experience in both frontend and backend, knowleadgeble in Drupal 7 & 8, Component based themeing with Patternlab and Twig, SASS,LESS, SMACSS. Worked with ReactJs and Riot in small to medium projects also using GraphQL.",
+      "title": "FullStack Web Developer",
+      "bio": "Freelance web developer with over 7 years of experience. Proven experience in both frontend and backend, knowleadgeble in Drupal 7 & 8, Component based themeing with Patternlab and Twig, SASS,LESS, SMACSS. Worked with ReactJs and Riot in small to medium projects also using GraphQL.",
       "cv_source": "cv/Cristina-Llamas-CV.pdf"
     }
   }

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import Project from "../Organisms/Project";
+import Project from "../Organisms/Project/Project";
 import List from "../Molecules/List/List";
 
 const ProjectList = ({ items }) => {
@@ -8,7 +8,7 @@ const ProjectList = ({ items }) => {
 
   return (
     <Fragment>
-      <h2>Side Projects</h2>
+      <h2>Side Projects / Playgrounds</h2>
       <List content={items} component={Project} />
     </Fragment>
   );

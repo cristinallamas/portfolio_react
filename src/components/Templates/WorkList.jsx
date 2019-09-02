@@ -1,13 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 
-import Work from '../Organisms/Work'
+import Work from "../Organisms/WorkItem/WorkItem";
 import List from "../Molecules/List/List";
-
 
 const WorkList = ({ items }) => {
   // Reverse array to get latest first. bleh.
   items = items.reverse();
-
 
   return (
     <Fragment>

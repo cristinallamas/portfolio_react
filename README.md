@@ -8,9 +8,9 @@ Continuous deployment with [Netlify](http://www.netlify.com) at [cristinallamas.
 
 ## Roadmap
 - [x] Read Data from local JSON file
-- [x] React Components
+- [-] React Components
+- [-] Style Guide
 - [ ] Styling
-- [ ] Style Guide
 - [ ] Read Data from GraphQL
 - [ ] Gastby
 - [ ] AWS / GraphCMS 
