@@ -8,7 +8,6 @@ import WorkItem from "../../Organisms/WorkItem/WorkItem";
 const WorkPage = (props) => {
 
   // Declare a new state variable, which we'll call "data".
-  // const [data, setData] = useState({ projects: [], jobs: [], about: {} });
   const currentWorkID = props.match.params.id;
 
   const [workData, setWorkData] = useState({});
