@@ -2,11 +2,8 @@
 import React from "react";
 // import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
-import Home from "./components/Pages/Home/Home";
-import WorkListPage from "./components/Pages/WorkListPage/WorkListPage";
-import WorkItemPage from "./components/Pages/WorkItemPage/WorkItemPage";
+import { BrowserRouter as Router } from "react-router-dom";
+import Layout from "./components/Templates/Layout";
 
 function App() {
 
@@ -20,10 +17,7 @@ function App() {
             content="A little bit about me and my work"
           />
         </Helmet>
-        {/* TODO: bring header here */}
-        <Route exact path="/" component={Home} />
-        <Route exact path="/work" component={WorkListPage} />
-        <Route exact path="/work/:id" component={WorkItemPage}/>
+        <Layout />
       </Router>
     </React.Fragment>
   );
