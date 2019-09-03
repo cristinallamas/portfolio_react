@@ -7,11 +7,15 @@ import WorkList from "../../Templates/WorkList";
 
 const Work = () => {
   // Declare a new state variable, which we'll call "data".
-  const [data, setData] = useState({ projects: [], jobs: [], about: {} });
+  const [projectList, setProjectList] = useState([]);
+  const [navigation, setNavigation] = useState([]);
+
 
   // Used "as" componentDidMount.
   useEffect(() => {
-    setData(dataSource.data);
+    setNavigation(dataSource.data.header);
+    setProjectList(dataSource.data.work);
+
   }, []);
 
   return (
@@ -19,8 +23,8 @@ const Work = () => {
       <Helmet>
         <title>Cristina Llamas - Work</title>
       </Helmet>
-      {data.header && <Header {...data.header} />}
-      {data.work && <WorkList items={data.work} />}
+      {navigation && <Header {...navigation} />}
+      {projectList && <WorkList items={projectList} />}
     </div>
   );
 };

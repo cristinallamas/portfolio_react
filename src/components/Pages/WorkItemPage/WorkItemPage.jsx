@@ -6,17 +6,21 @@ import Header from "../../Organisms/Header/Header";
 import WorkItem from "../../Organisms/WorkItem/WorkItem";
 
 const WorkPage = (props) => {
-  // Declare a new state variable, which we'll call "data".
-  const [data, setData] = useState({ projects: [], jobs: [], about: {} });
-  const currentWorkID = props.match.params.id;
-  const [workData, setWorkData] = useState({});
 
+  // Declare a new state variable, which we'll call "data".
+  // const [data, setData] = useState({ projects: [], jobs: [], about: {} });
+  const currentWorkID = props.match.params.id;
+
+  const [workData, setWorkData] = useState({});
+  const [navigation, setNavigation] = useState([]);
+
+  const currentWorkItem = dataSource.data.work[currentWorkID - 1];
 
   // Used "as" componentDidMount.
   useEffect(() => {
-    setData(dataSource.data);
-    setWorkData(dataSource.data.work[currentWorkID - 1]);
-  }, []);
+    setNavigation(dataSource.data.header);
+    setWorkData(currentWorkItem);
+  }, [currentWorkItem]);
 
 
   return (
@@ -24,8 +28,8 @@ const WorkPage = (props) => {
       <Helmet>
         <title>Cristina Llamas - Work Item</title>
       </Helmet>
-      {data.header && <Header {...data.header} />}
-      {data.work && <WorkItem {...workData}/>}
+      {navigation && <Header {...navigation} />}
+      {workData && <WorkItem {...workData}/>}
     </div>
   );
 };

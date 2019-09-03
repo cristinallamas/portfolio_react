@@ -8,36 +8,40 @@ import Card from "../../Molecules/Card/Card";
 
 const Home = () => {
   // Declare a new state variable, which we'll call "data".
-  const [data, setData] = useState({ projects: [], jobs: [], about: {} });
-
-  const featuredWork = data.work
-    ? data.work.filter(item => item.featured === true)
-    : {};
-  // {
-  //   console.dir(featuredWork[0]);
-  // }
+  const [data, setData] = useState([]);
+  const [projectList, setProjectList] = useState([]);
+  const [featuredProject, setFeaturedProject] = useState({});
 
   // Used "as" componentDidMount.
   useEffect(() => {
+    // Initialise data tree state.
     setData(dataSource.data);
+    // Load list of work.
+    setProjectList(dataSource.data.work);
+    // Initialise featured project.
+    const featuredProject = dataSource.data.work.find(
+      item => item.featured === true
+    );
+    setFeaturedProject(featuredProject);
   }, []);
-
+  
   return (
     <div>
       {data.header && <Header {...data.header} />}
       {data.about && <About {...data.about} />}
       <h2>Latest Project</h2>
-      {data.work && <Card
-                tag={featuredWork[0].category}
-                title={featuredWork[0].project}
-                link={`/work/${featuredWork[0].id}`}
-                // picture="https://picsum.photos/id/2/500/350"
-                variation="right"
-                description={featuredWork[0].description}
-              />}
-      
-      {data.work && <ProjectList items={data.projects} />}
+      {featuredProject && (
+        <Card
+          tag={featuredProject.category}
+          title={featuredProject.project}
+          link={`/work/${featuredProject.id}`}
+          // picture="https://picsum.photos/id/2/500/350"
+          variation="right"
+          description={featuredProject.description}
+        />
+      )}
 
+      {projectList && <ProjectList items={projectList} />}
     </div>
   );
 };
