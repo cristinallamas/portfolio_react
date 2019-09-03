@@ -19,7 +19,7 @@ const Home = () => {
     setProjectList(dataSource.data.projects);
     // Initialise featured project.
     const featuredWork = dataSource.data.work.find(
-      item => item.featured === true
+      ({featured}) => featured === true
     );
     setFeaturedWork(featuredWork);
   }, []);
@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <div>
       {data.about && <About {...data.about} />}
-      <h2>Latest Project</h2>
+      <h2>Featured Project</h2>
       {featuredWork && (
         <Card
           tag={featuredWork.category}
