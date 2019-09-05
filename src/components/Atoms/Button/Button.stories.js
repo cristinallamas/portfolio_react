@@ -8,7 +8,6 @@ storiesOf('Button', module)
     type="submit"
     label="Primary button"
     disabled={false}
-    children={[]}
     onClick={() => {}}
     variant="-primary"
     srLabel="Button"
@@ -20,7 +19,6 @@ storiesOf('Button', module)
     type="submit"
     label="Secondary button"
     disabled={false}
-    children={[]}
     onClick={() => {}}
     srLabel="Button"
     className="secondary_button"
@@ -32,7 +30,6 @@ storiesOf('Button', module)
     type="submit"
     label="Disabled primary button"
     disabled={true}
-    children={[]}
     onClick={() => {}}
     srLabel="Button"
     className="primary_button"

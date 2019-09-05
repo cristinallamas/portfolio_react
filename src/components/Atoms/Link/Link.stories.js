@@ -9,7 +9,6 @@ storiesOf('Link', module)
     onClick={() => {}} 
     className="primary_link"
     target="_blank" 
-    children={[]}
     >
 	    My link
 	</Link>
@@ -20,7 +19,6 @@ storiesOf('Link', module)
     onClick={() => {}} 
     className="button_link"
     target="" 
-    children={[]}
     >
 	    My link
 	</Link>

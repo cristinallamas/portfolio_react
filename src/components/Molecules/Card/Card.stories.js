@@ -7,7 +7,6 @@ storiesOf('Card', module)
     <Card 
     title="Card Title" 
     url="/my-card"
-    children={[]}
     >
 	    My Card
 	  </Card>

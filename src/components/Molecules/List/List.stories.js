@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import List from './List';
-import Project from '../../Organisms/Project';
-import Work from '../../Organisms/Work';
+import Project from '../../Organisms/Project/Project'
+import WorkItem from '../../Organisms/WorkItem/WorkItem';
 
 const projects = [
     {
@@ -21,7 +21,7 @@ const projects = [
       "url": "https://github.com/cristinallamas/meal-planner"
     }
   ];
-const work = [
+const workItem = [
     {
       "id": 1,
       "project": "Attraction Tickets Direct",
@@ -84,7 +84,7 @@ storiesOf('List', module)
     <List content={projects} component={Project} />
   ))
   .add('Work List', () => (
-    <List content={work} component={Work} />
+    <List content={workItem} component={WorkItem} />
   )); 
 
 

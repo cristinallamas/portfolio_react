@@ -17,7 +17,7 @@ const Card = ({
   variation,
   className
 }) => (
-  <div className={className}>
+  <div className={className +''+ variation}>
     <div className="left">
       {tag && <h3>{tag}</h3>}
       {title && <h2>{title}</h2>}
