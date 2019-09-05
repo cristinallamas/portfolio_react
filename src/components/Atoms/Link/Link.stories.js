@@ -4,24 +4,22 @@ import Link from './Link';
 
 storiesOf('Link', module)
   .add('Link', () => (
-    <Link 
-    href="/my-link" 
-    onClick={() => {}} 
-    className="primary_link"
-    target="_blank" 
+    <Link
+      href="/my-link"
+      onClick={() => {}}
+      className="primary_link"
+      target="_blank"
     >
-	    My link
-	</Link>
+      My link
+    </Link>
   ))
   .add('Button Link', () => (
-    <Link 
-    href="/button-link" 
-    onClick={() => {}} 
-    className="button_link"
-    target="" 
+    <Link
+      href="/button-link"
+      onClick={() => {}}
+      className="button_link"
+      target=""
     >
-	    My link
-	</Link>
-  )); 
-
-
+      My link
+    </Link>
+  ));

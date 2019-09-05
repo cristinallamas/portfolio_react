@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 // import styled from 'styled-components'
 // import { space, width, fontSize, color } from 'styled-system'
 
-import Link from "../../Atoms/Link/Link";
+import Link from '../../Atoms/Link/Link';
 // import './_style.scss';
 // Add styled-system functions to your component
 
@@ -15,14 +15,14 @@ const Card = ({
   description,
   picture,
   variation,
-  className
+  className,
 }) => (
-  <div className={className +''+ variation}>
+  <div className={className + '' + variation}>
     <div className="left">
       {tag && <h3>{tag}</h3>}
       {title && <h2>{title}</h2>}
       {description && <p>{description}</p>}
-      <Link href={link} >Details</Link>
+      <Link href={link}>Details</Link>
     </div>
     <div className="right">
       <img alt={title} src={picture} />
@@ -36,20 +36,20 @@ Card.propTypes = {
   variation: PropTypes.string,
   picture: PropTypes.string,
   description: PropTypes.string,
-  tag: PropTypes.string
+  tag: PropTypes.string,
 };
 
 /**
  * Default props
  */
 Card.defaultProps = {
-  link: "/my-link",
-  title: "Title",
-  className: "project__card",
-  variation: "standard",
-  picture: "https://picsum.photos/id/2/500/350",
-  tag: "tag",
-  description: "Lorem ipsum"
+  link: '/my-link',
+  title: 'Title',
+  className: 'project__card',
+  variation: 'standard',
+  picture: 'https://picsum.photos/id/2/500/350',
+  tag: 'tag',
+  description: 'Lorem ipsum',
 };
 
 export default Card;
