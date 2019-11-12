@@ -9,6 +9,7 @@ storiesOf('Link', module)
       onClick={() => {}}
       className="primary_link"
       target="_blank"
+      linkType="default"
     >
       My link
     </Link>
@@ -18,6 +19,7 @@ storiesOf('Link', module)
       href="/button-link"
       onClick={() => {}}
       className="button_link"
+      linkType="button"
       target=""
     >
       My link

@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
-import dataSource from "../../../data/dataSource.json";
-import WorkList from "../../Templates/WorkList";
+import dataSource from '../../../data/dataSource.json';
+import WorkTemplate from '../../Templates/WorkTemplate';
 
 const Work = () => {
   // Declare a new state variable, which we'll call "data".
   const [projectList, setProjectList] = useState([]);
 
-
   // Used "as" componentDidMount.
   useEffect(() => {
     setProjectList(dataSource.data.work);
-
   }, []);
 
   return (
@@ -20,7 +18,7 @@ const Work = () => {
       <Helmet>
         <title>Cristina Llamas - Work</title>
       </Helmet>
-      {projectList && <WorkList items={projectList} />}
+      {projectList && <WorkTemplate items={projectList} />}
     </div>
   );
 };

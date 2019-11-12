@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
-import dataSource from "../../../data/dataSource.json";
-import WorkItem from "../../Organisms/WorkItem/WorkItem";
+import dataSource from '../../../data/dataSource.json';
+import WorkItem from '../../Organisms/WorkItem/WorkItem';
 
-const WorkPage = (props) => {
-
+const WorkPage = props => {
   // Declare a new state variable, which we'll call "data".
   const currentWorkID = props.match.params.id;
   const [workData, setWorkData] = useState({});
@@ -21,7 +20,7 @@ const WorkPage = (props) => {
       <Helmet>
         <title>Cristina Llamas - Work Item</title>
       </Helmet>
-      {workData && <WorkItem {...workData}/>}
+      {workData && <WorkItem {...workData} />}
     </div>
   );
 };

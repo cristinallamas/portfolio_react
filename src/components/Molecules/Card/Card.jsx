@@ -2,12 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import styled from 'styled-components'
 // import { space, width, fontSize, color } from 'styled-system'
-import { Link as RouteLink } from "react-router-dom";
+import { Link as RouteLink } from 'react-router-dom';
+import styled from 'styled-components';
+import { StyledLink } from '../../Atoms/Link/Link';
 
+const Image = styled.img`
+  max-width: 600px;
+  @media (max-width: 320px) {
+    max-width: 100%;
+  }
+`;
+
+// TODO: why this style is not being imported.
+const StyledRouteLink = styled(StyledLink)`
+  color: red;
+  ${StyledLink}
+`.withComponent(RouteLink);
 
 const Card = ({
   link,
-
   tag,
   title,
   description,
@@ -20,10 +33,10 @@ const Card = ({
       {tag && <h3>{tag}</h3>}
       {title && <h2>{title}</h2>}
       {description && <p>{description}</p>}
-      <RouteLink to={link}>Details</RouteLink>
+      <StyledRouteLink to={link}>Details</StyledRouteLink>
     </div>
     <div className="right">
-      <img alt={title} src={picture} />
+      <Image className="card-image" alt={title} src={picture} />
     </div>
   </div>
 );

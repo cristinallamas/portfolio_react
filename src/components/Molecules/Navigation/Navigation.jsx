@@ -1,6 +1,13 @@
-import React from "react";
-import NavigationItem from "../NavigationItem/NavigationItem";
+import React from 'react';
+import styled from 'styled-components';
 
+import NavigationItem from '../NavigationItem/NavigationItem';
+
+const NavList = styled.ul`
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+`;
 const Navigation = ({ id, navClassName, items }) => (
   <div id={id} className={navClassName}>
     <nav
@@ -8,11 +15,11 @@ const Navigation = ({ id, navClassName, items }) => (
       itemScope="itemscope"
       itemType="http://schema.org/SiteNavigationElement"
     >
-      <ul>
+      <NavList>
         {items.map((item, index) => (
           <NavigationItem key={index} item={item} />
         ))}
-      </ul>
+      </NavList>
     </nav>
   </div>
 );

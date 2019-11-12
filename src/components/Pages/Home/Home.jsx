@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import dataSource from "../../../data/dataSource.json";
-import About from "../../Templates/About";
-import ProjectList from "../../Templates/ProjectList";
-import Card from "../../Molecules/Card/Card";
+import dataSource from '../../../data/dataSource.json';
+import About from '../../Templates/About';
+import ProjectTemplate from '../../Templates/ProjectTemplate';
+import Card from '../../Molecules/Card/Card';
 
 const Home = () => {
   // Declare a new state variable, which we'll call "data".
   const [data, setData] = useState([]);
-  const [projectList, setProjectList] = useState([]);
+  const [projectTemplate, setProjectTemplate] = useState([]);
   const [featuredWork, setFeaturedWork] = useState({});
 
   // Used "as" componentDidMount.
@@ -16,14 +16,14 @@ const Home = () => {
     // Initialise data tree state.
     setData(dataSource.data);
     // Load list of work.
-    setProjectList(dataSource.data.projects);
+    setProjectTemplate(dataSource.data.projects);
     // Initialise featured project.
     const featuredWork = dataSource.data.work.find(
-      ({featured}) => featured === true
+      ({ featured }) => featured === true,
     );
     setFeaturedWork(featuredWork);
   }, []);
-  
+
   return (
     <div>
       {data.about && <About {...data.about} />}
@@ -39,7 +39,7 @@ const Home = () => {
         />
       )}
 
-      {projectList && <ProjectList items={projectList} />}
+      {projectTemplate && <ProjectTemplate items={projectTemplate} />}
     </div>
   );
 };
