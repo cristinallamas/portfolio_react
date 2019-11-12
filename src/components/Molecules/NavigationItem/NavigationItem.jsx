@@ -1,15 +1,15 @@
 import React from 'react';
-import Link, { StyledLink } from '../../Atoms/Link/Link';
+import Link, { linkStyles } from '../../Atoms/Link/Link';
 // import { Link as RouteLink } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import isExternal from 'is-url-external';
 import styled from 'styled-components';
 
 // TODO: why this style is not being imported.
-const StyledNavLink = styled(StyledLink)`
+const StyledNavLink = styled(NavLink)`
   color: red;
-  ${StyledLink}
-`.withComponent(NavLink);
+  ${linkStyles}
+`;
 
 const ProcessedLink = ({ url, title }) => {
   if (isExternal(url)) {

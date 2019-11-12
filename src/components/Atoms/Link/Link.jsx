@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-const commonStyles = css`
+const linkStyles = css`
   text-decoration: none;
   color: #b3b3b3;
   font-family: 'mission_gothic', Arial, Verdana, sans-serif;
@@ -23,10 +23,10 @@ const commonStyles = css`
 `;
 
 const StyledLink = styled.a`
-  ${commonStyles}
+  ${linkStyles}
 `;
 const StyledButtonLink = styled.a`
-  ${commonStyles}
+  ${linkStyles}
 
   border: 2px solid #b3b3b3;
   border-radius: 22px;
@@ -98,4 +98,4 @@ Link.defaultProps = {
 };
 
 export default Link;
-export { StyledLink, StyledButtonLink };
+export { StyledLink, StyledButtonLink, linkStyles };
