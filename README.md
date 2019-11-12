@@ -7,10 +7,10 @@ This is a personal project to get to know some aspects of React, Gastby and Grap
 Continuous deployment with [Netlify](http://www.netlify.com) at [cristinallamas.netlify.com](http://cristinallamas.netlify.com).
 
 ## Roadmap
+
 - [x] Read Data from local JSON file
 - [-] React Components
 - [-] Style Guide
 - [ ] Styling
 - [ ] Read Data from GraphQL
-- [ ] Gastby
-- [ ] AWS / GraphCMS 
+- [ ] AWS / GraphCMS

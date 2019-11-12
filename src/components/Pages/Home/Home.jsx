@@ -33,7 +33,7 @@ const Home = () => {
           tag={featuredWork.category}
           title={featuredWork.project}
           link={`/work/${featuredWork.id}`}
-          // picture="https://picsum.photos/id/2/500/350"
+          picture={featuredWork.picture}
           variation="right"
           description={featuredWork.description}
         />

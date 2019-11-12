@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import styled from 'styled-components'
 // import { space, width, fontSize, color } from 'styled-system'
+import { Link as RouteLink } from "react-router-dom";
 
-import Link from '../../Atoms/Link/Link';
-// import './_style.scss';
-// Add styled-system functions to your component
 
 const Card = ({
   link,
@@ -22,7 +20,7 @@ const Card = ({
       {tag && <h3>{tag}</h3>}
       {title && <h2>{title}</h2>}
       {description && <p>{description}</p>}
-      <Link href={link}>Details</Link>
+      <RouteLink to={link}>Details</RouteLink>
     </div>
     <div className="right">
       <img alt={title} src={picture} />

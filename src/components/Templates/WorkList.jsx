@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
-import Card from "../Molecules/Card/Card";
+import Card from '../Molecules/Card/Card';
 
 const WorkList = ({ items }) => {
   // Reverse array to get latest first. bleh.
@@ -17,6 +17,7 @@ const WorkList = ({ items }) => {
                 tag={item.category}
                 title={item.project}
                 link={`/work/${item.id}`}
+                picture={item.picture}
                 variation="right"
                 description={item.description}
               />
