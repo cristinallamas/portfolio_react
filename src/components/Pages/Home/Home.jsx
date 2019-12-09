@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import dataSource from '../../../data/dataSource.json';
-import About from '../../Templates/About';
+import PersonIntro from '../../Organisms/PersonIntro/PersonIntro';
 import ProjectTemplate from '../../Templates/ProjectTemplate';
 import Card from '../../Molecules/Card/Card';
 
@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <div>
-      {data.about && <About {...data.about} />}
+      {data.about && <PersonIntro {...data.about} />}
       <h2>Featured Project</h2>
       {featuredWork && (
         <Card

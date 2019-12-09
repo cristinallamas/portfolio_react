@@ -10,6 +10,11 @@
         },
         {
           "id": 2,
+          "title": "About me",
+          "url": "/about"
+        },
+        {
+          "id": 3,
           "title": "Blog",
           "url": "https://medium.com/@cristinallamas"
         }
@@ -24,7 +29,7 @@
       {
         "id": 2,
         "title": "Little RiotJS music search (RiotJS, LastFM API)",
-        "url": "https://github.com/cristinallamas/riot-examples"
+        "url": "https://github.com/cristinallamas/riot-experiments"
       },
       {
         "id": 3,
@@ -119,7 +124,9 @@
     "about": {
       "name": "Cristina Llamas Roman",
       "title": "FullStack Web Developer",
-      "bio": "Freelance web developer with over 7 years of experience. Proven experience in both frontend and backend, knowleadgeble in Drupal 7 & 8, Component based themeing with Patternlab and Twig, SASS,LESS, SMACSS. Worked with ReactJs and Riot in small to medium projects also using GraphQL.",
+      "short_bio": "Freelance web developer with over 7 years of experience. Proven experience in both frontend and backend, knowleadgeble in Drupal 7 & 8, Component based themeing with Patternlab and Twig, SASS,LESS, SMACSS. Worked with ReactJs and Riot in small to medium projects also using GraphQL.",
+      "bio": "Lorem ipsum",
+      "image": "https://media.licdn.com/dms/image/C5603AQF3UIs43hzCMA/profile-displayphoto-shrink_200_200/0?e=1581552000&v=beta&t=J3c-tqAewc3jRTVbyGm-afqTmYB7b4gDpgRCHTv0_4U",
       "cv_source": "cv/Cristina-Llamas-CV.pdf"
     }
   }

@@ -6,6 +6,8 @@ This is a personal project to get to know some aspects of React and GraphQL.
 
 Continuous deployment with [Netlify](http://www.netlify.com) at [cristinallamas.netlify.com](http://cristinallamas.netlify.com).
 
+Styleguide in [https://cristinallamas.netlify.com/storybook/](https://cristinallamas.netlify.com/storybook/)
+
 ## Components
 
 Following Brad Frost's Atomic design approach, the components will be divided into:
@@ -20,7 +22,7 @@ Following Brad Frost's Atomic design approach, the components will be divided in
 
 - [x] Read Data from local JSON file
 - [x] React Components
-- [ ] Style Guide
-- [ ] Styling
+- [ ] Style Guide (Storybook chosen)
+- [ ] Styling (styled-components chosen)
 - [ ] Data source from GraphQL
 - [ ] AWS / Headless CMS
