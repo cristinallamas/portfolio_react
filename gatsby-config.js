@@ -160,10 +160,11 @@ module.exports = {
         display: `standalone`,
       },
     },
+    `gatsby-plugin-offline`,
     {
-      resolve: `gatsby-plugin-offline`,
+      resolve: 'gatsby-plugin-html-attributes',
       options: {
-        precachePages: [`/`, `/work`, `/work/*`, `/blog`],
+        lang: 'en',
       },
     },
   ],
