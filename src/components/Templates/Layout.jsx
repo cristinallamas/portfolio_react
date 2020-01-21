@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 import { rhythm, scale, myrhythm } from '../../utils/typography';
 import styled, { injectGLobal } from 'styled-components';
+import Helmet from 'react-helmet';
 
 import { createGlobalStyle } from 'styled-components';
 
@@ -35,6 +36,7 @@ class Layout extends React.Component {
     return (
       <StyledLayout>
         <GlobalStyle />
+        <Helmet htmlAttributes={{ lang: 'en' }}></Helmet>
         <header>
           <nav>
             <Link to="/">Home</Link>
