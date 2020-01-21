@@ -7,11 +7,9 @@ const createPages = async ({ graphql, actions }) => {
   const blogPost = require.resolve(
     `../../components/Templates/BlogPostTemplate.jsx`,
   );
-  console.log(blogPost);
   const workPageTemplate = path.resolve(
     `../../components/Templates/WorkPage.jsx`,
   );
-  console.log(workPageTemplate);
 
   const result = await graphql(
     `

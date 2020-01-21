@@ -47,10 +47,8 @@ const Work = () => {
       }
     }
   `);
-  console.log(workQuery);
 
   const workArray = workQuery.workList.edges;
-  // console.log(workArray);
 
   return (
     <Layout>

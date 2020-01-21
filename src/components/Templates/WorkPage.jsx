@@ -15,16 +15,10 @@ const Heading = styled.h1`
 import SEO from '../Templates/seo';
 
 const WorkPage = ({ data }) => {
-  console.log(data);
-  // var uid = props.pageContext.node.uid;
-
-  // const workData = props.pageContext.node;
-  // console.log(workPageQueryResult);
   return (
     <Layout title={data.work.project}>
       <SEO title="All posts" />
       <Heading as="h1">{data.work.project}</Heading>
-      {/* <h1>{data.work.project}</h1> */}
       <h2>{data.work.company}</h2>
       <h3>{data.work.category}</h3>
       <p>{data.work.description}</p>
@@ -69,60 +63,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-// export const pageQuery = graphql(
-//   `
-//     query WorkPages($UID: Int!) {
-//       allWorkJson(filter: { uid: { eq: $UID } }) {
-//         edges {
-//           node {
-//             uid
-//             category
-//             company
-//             description
-//             featured
-//             project
-//             technologies
-//             url
-//             pic {
-//               url {
-//                 id
-//                 childImageSharp {
-//                   fixed {
-//                     ...GatsbyImageSharpFixed
-//                   }
-//                 }
-//               }
-//             }
-//             fields {
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `,
-// );
-
-// export const pageQuery = graphql`
-//   query WorkPageByUID($workId: Int!) {
-//     allWorkJson(filter: { uid: { eq: $workId } }) {
-//       edges {
-//         node {
-//           uid
-//           category
-//           company
-//           description
-//           featured
-//           project
-//           technologies
-//           url
-//           fields {
-//             slug
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
-
-// // console.log(pageQuery);

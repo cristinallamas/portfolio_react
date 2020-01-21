@@ -50,7 +50,6 @@ function About() {
       }
     }
   `);
-  console.log(data);
   return (
     <div>
       {/* <Heading as="h3">A bit about me</Heading> */}

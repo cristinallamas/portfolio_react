@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-json`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -151,8 +152,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Cristina Llamas - Full Stack Developer`,
+        short_name: `Cristina Llamas`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
@@ -162,7 +163,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/work`, `/work/*`],
+        precachePages: [`/`, `/work`, `/work/*`, `/blog`],
       },
     },
   ],
