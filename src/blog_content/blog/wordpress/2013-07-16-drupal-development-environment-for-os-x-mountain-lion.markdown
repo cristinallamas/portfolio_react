@@ -35,15 +35,15 @@ to start it
 `sudo apachectl start`
 
 to stop it
-  
+
 `sudo apachectl stop`
 
 to restart it
-  
+
 `sudo apachectl restart`
 
 To find the Apache version
-  
+
 `httpd -v`
 
 The version installed in Mountain Lion is Apache/2.2.22

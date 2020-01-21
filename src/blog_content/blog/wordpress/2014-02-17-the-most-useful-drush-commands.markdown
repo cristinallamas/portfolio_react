@@ -45,8 +45,8 @@ Long answer: See [http://drupal.stackexchange.com/q/62934/10086](http://drupal.
     `drush en name_of_module -y`
 
 `-y` skips the confirmation question. Some drush commands may miss the `-y` part, a workaround for this that always works is putting it before:
-  
- `drush -y en name_of_module`
+
+`drush -y en name_of_module`
 
 Newer versions of drush automatically download the module if needed.
 

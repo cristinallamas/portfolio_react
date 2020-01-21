@@ -20,7 +20,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       value,
     });
-    console.log(value);
   }
 };
 

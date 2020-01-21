@@ -37,5 +37,5 @@ drush dis -y memcache
 ```
 
 Finally we clear all the cache.
-  
+
 `drush cc all`
