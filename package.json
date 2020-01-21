@@ -5,22 +5,41 @@
   "license": "UNLICENSED",
   "author": "Cristina Llamas",
   "dependencies": {
+    "@ceteio/styled-components-rhythm": "^2.0.1",
+    "@deckdeckgo/highlight-code": "^1.0.0-rc.2-1",
     "@reach/router": "^1.2.1",
     "@storybook/preset-create-react-app": "^1.2.0",
     "babel-plugin-styled-components": "^1.10.6",
     "classnames": "^2.2.6",
     "gatsby": "^2.18.8",
+    "gatsby-image": "^2.2.38",
+    "gatsby-plugin-manifest": "^2.2.37",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-postcss": "^2.1.19",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-sharp": "^2.3.13",
     "gatsby-plugin-styled-components": "^3.1.14",
+    "gatsby-plugin-typography": "^2.3.20",
+    "gatsby-remark-highlight-code": "^1.0.0",
+    "gatsby-remark-prismjs": "^3.3.30",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-json": "^2.2.20",
+    "gatsby-transformer-pdf": "^1.1.25",
+    "gatsby-transformer-remark": "^2.6.48",
+    "gatsby-transformer-sharp": "^2.3.12",
     "is-url-external": "^1.0.3",
+    "prism-themes": "^1.3.0",
+    "prismjs": "^1.19.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.0.1",
+    "react-typography": "^0.16.19",
     "styled-components": "^4.4.1",
-    "styled-system": "^5.0.16"
+    "styled-system": "^5.0.16",
+    "typography": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
   },
   "scripts": {
     "dev": "gatsby develop -p 3333 -o",
@@ -30,18 +49,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

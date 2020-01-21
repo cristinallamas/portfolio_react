@@ -1,59 +1,48 @@
 const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.onCreateNode = ({ node, actions }) => {
+// create nodes.
+exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
-  // const workTemplate = path.resolve(
-  //   `./src/components/Organisms/WorkItemPage/WorkItemPage.jsx`,
-  // );
 
-  if (node.data) {
-    if (node.data.work) {
-      const workEntries = node.data.work;
-
-      // console.log(JSON.stringify(workEntries, undefined, 4));
-    }
-    // createNodeField({
-    //   node,
-    //   name: `slug`,
-    //   value: `work/1`,
-    // });
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode });
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    });
   }
+  if (node.internal.type === `WorkJson`) {
+    const value = createFilePath({ node, getNode }) + node.uid;
+    console.log(node);
 
-  // if (node.internal.type === `DataJson`) {
-  // console.log(node.internal);
-  // }
-  // console.log(node.internal.type);
-
-  // const workTemplate = path.resolve(
-  //   `./src/components/Organisms/WorkItemPage/WorkItemPage.jsx`,
-  // );
-  // console.log(JSON.stringify(workTemplate, undefined, 4));
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    });
+    console.log(value);
+  }
 };
+
+// create pages
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  // const workTemplate = path.resolve(
-  //   `./src/components/Organisms/WorkItemPage/WorkItemPage.jsx`,
-  // );
 
-  const results = await graphql(
+  const blogPost = require.resolve(
+    `./src/components/Templates/BlogPostTemplate.jsx`,
+  );
+  const workPageQueryResult = await graphql(
     `
-      query MyQuery {
-        allDataJson {
+      query WorkPages {
+        allWorkJson {
           edges {
             node {
-              data {
-                work {
-                  category
-                  company
-                  description
-                  featured
-                  picture
-                  id
-                  project
-                  technologies
-                  url
-                }
+              uid
+              fields {
+                slug
               }
             }
           }
@@ -61,26 +50,79 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `,
   );
-  const workEntries =
-    results.data.allDataJson.edges[0].node.data.work;
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                slug
+              }
+            }
+          }
+        }
+      }
+    `,
+  );
 
-  // console.log(workEntries);
+  if (result.errors) {
+    throw result.errors;
+  }
 
-  // console.log(JSON.stringify(results, null, 4));
+  // Create blog posts pages.
+  const posts = result.data.allMarkdownRemark.edges;
 
-  workEntries.forEach((workEntry, index) => {
-    console.log(workEntry);
-    //   createPage({
-    //     // This is the slug you created before
-    //     // (or `node.frontmatter.slug`)
-    //     path: `work/${workEntry.id}`,
-    //     // This component will wrap our MDX content
-    //     component: path.resolve(
-    //       `./src/components/Organisms/WorkItemPage/WorkItemPage.jsx`,
-    //     ),
-    //     // You can use the values in this context in
-    //     // our page layout component
-    //     context: { id: workEntry.id },
-    //   });
+  posts.forEach((post, index) => {
+    const previous =
+      index === posts.length - 1 ? null : posts[index + 1].node;
+    const next = index === 0 ? null : posts[index - 1].node;
+
+    createPage({
+      path: post.node.fields.slug,
+      component: blogPost,
+      context: {
+        slug: post.node.fields.slug,
+        previous,
+        next,
+      },
+    });
+  });
+
+  const workPage = path.resolve(
+    `./src/components/Templates/WorkPage.jsx`,
+  );
+
+  if (workPageQueryResult.errors) {
+    throw workPageQueryResult.errors;
+  }
+
+  // Create work post pages.
+  const workPages = workPageQueryResult.data.allWorkJson.edges;
+
+  workPages.forEach((workItem, index) => {
+    // const previous =
+    //   index === posts.length - 1 ? null : posts[index + 1].node;
+    // const next = index === 0 ? null : posts[index - 1].node;
+    console.log(workItem.node);
+
+    createPage({
+      path: workItem.node.fields.slug,
+      component: workPage,
+      context: {
+        slug: workItem.node.fields.slug,
+        node: workItem.node,
+        UID: workItem.node.uid, // passing it to the query
+        // previous,
+        // next,
+      },
+    });
   });
 };
