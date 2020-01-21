@@ -8,14 +8,14 @@ slug: add-custom-css-and-js-within-a-drupal-module
 title: Add custom css and js within a drupal module
 wordpress_id: 127
 categories:
-- Development
-- Drupal
+  - Development
+  - Drupal
 tags:
-- css
-- drupal
-- javascript
-- js
-- module
+  - css
+  - drupal
+  - javascript
+  - js
+  - module
 ---
 
 As easy as to add this 2 lines:

@@ -8,12 +8,13 @@ slug: drupal-7-override-image-styles-programmatically
 title: Drupal 7 override image styles programmatically
 wordpress_id: 248
 categories:
-- Drupal
+  - Drupal
 tags:
-- code
-- drupal
-- image styles
+  - code
+  - drupal
+  - image styles
 ---
+
 ```php
     /**
      * Implements hook_image_styles_alter().
@@ -21,9 +22,9 @@ tags:
     function mymodule_image_styles_alter(&$styles) {
       // Check that we only affect a default style.
       if (isset($styles['thumbnail_large']) && isset($styles['thumbnail_large']['storage'])) {
-    
+
         if ($styles['thumbnail_large']['storage'] == IMAGE_STORAGE_DEFAULT) {
-    
+
           $styles['thumbnail_large'] = array(
             'name' => 'thumbnail_large',
             'effects' => array(

@@ -8,15 +8,9 @@ slug: git-create-local-branch-from-remote-branch
 title: 'Git: Create local branch from remote branch'
 wordpress_id: 241
 categories:
-- Drupal
+  - Drupal
 ---
 
-
-
-    
 ```
 git checkout -b <local-branch-name> <remote-name>/<remote-branch-name>
 ```
-
-
-

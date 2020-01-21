@@ -8,16 +8,16 @@ slug: how-to-create-livestage-drupal-development-environment-with-proxmox
 title: How to create Live / Stage Drupal development environment with Proxmox
 wordpress_id: 41
 tags:
-- dedicated server
-- Development
-- drupal
-- environment
-- live
-- ovh
-- proxmox
-- stage
-- ve
-- virtual machine
+  - dedicated server
+  - Development
+  - drupal
+  - environment
+  - live
+  - ovh
+  - proxmox
+  - stage
+  - ve
+  - virtual machine
 ---
 
 soon...

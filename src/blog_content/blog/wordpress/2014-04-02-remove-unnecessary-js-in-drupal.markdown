@@ -8,35 +8,27 @@ slug: remove-unnecessary-js-in-drupal
 title: Remove unnecessary JS in Drupal
 wordpress_id: 219
 categories:
-- Drupal
+  - Drupal
 tags:
-- drupal
-- drupal 7 drupal 6
-- jss
-- theme
-- theming
+  - drupal
+  - drupal 7 drupal 6
+  - jss
+  - theme
+  - theming
 ---
 
 ## Drupal 6
 
-
-
 ```php
     function mytheme_preprocess_page(&$vars){
         $scripts = drupal_add_js();
-        //PRINT THIS ARRAY AND UNSET THE UNWANTED ARRAY// 
+        //PRINT THIS ARRAY AND UNSET THE UNWANTED ARRAY//
         unset($scripts['module']['YOUR_PATH_TO_JS']);
         $vars['scripts']= drupal_get_js('header', $scripts);
     }
 ```
-    
-
-
-
 
 ## Drupal 7
-
-
 
 ```
     function mymodule_js_alter(&$javascript){

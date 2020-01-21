@@ -8,44 +8,33 @@ slug: install-lamp-apache-mysql-php-in-ubunut-server-13-04
 title: Install LAMP (apache, mysql, php) in Ubunut Server 13.04
 wordpress_id: 177
 categories:
-- Development
-- SysAdmin
+  - Development
+  - SysAdmin
 tags:
-- apache
-- apache2
-- how to
-- install
-- lamp
-- mysql
-- mysql server
-- php
-- php5
-- sysadmin
-- ubuntu
-- ubuntu server
-- ubuntu server 13.04
+  - apache
+  - apache2
+  - how to
+  - install
+  - lamp
+  - mysql
+  - mysql server
+  - php
+  - php5
+  - sysadmin
+  - ubuntu
+  - ubuntu server
+  - ubuntu server 13.04
 ---
 
-``````Fake infohostname myserver.com IP address 111.222.333.444. ```
-
-
-
+``Fake infohostname myserver.com IP address 111.222.333.444. ```
 
 ## Login as Root
 
-
-
-    
     `sudo su`
-
-
-
 
 ## Installing MySQL 5
 
-
-
-``` 
+```
     root@myserver.com:~# sudo su
     root@myserver.com:~# apt-get install mysql-server mysql-client
     E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem.
@@ -58,7 +47,7 @@ tags:
      [ OK ]
      * Starting domain name service... bind9 [ OK ]
     root@myserver.com:~#
-    
+
     root@myserver.com:~# apt-get install mysql-server mysql-client
     Reading package lists... Done
     Building dependency tree
@@ -104,7 +93,7 @@ tags:
      └────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
     Package configuration
      ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-    
+
     ┌────────Configuring mysql-server-5.5───────────┐
      │ │
      │ │
@@ -114,7 +103,7 @@ tags:
      ├─└───────────────────────────────────────────┘─┤
      │ < OK > │
      └───────────────────────────────────────────────┘
-    
+
     Selecting previously unselected package libaio1:amd64.
     (Reading ... 24304 files and directories currently installed.)
     Unpacking libaio1:amd64 (from .../libaio1_0.3.109-4_amd64.deb) ...
@@ -164,13 +153,9 @@ tags:
     root@myserver.com:~#
 ```
 
-
-
 ## Installing Apache2
 
-
-
-``` 
+```
     root@myserver.com:~# apt-get install apache2
     Reading package lists... Done
     Building dependency tree
@@ -232,10 +217,7 @@ Apache's default document root is /var/www on Ubuntu, and the configuration file
 
 Ff we visit from any browser connected to the internet the address of our server  http://111.222.333.444/ we'll see the 'It works!' page.
 
-
 ## Installing PHP
-
-
 
 ```
     root@myserver.com:~# apt-get install php5 libapache2-mod-php5
@@ -324,31 +306,18 @@ Ff we visit from any browser connected to the internet the address of our server
     root@myserver.com:~#
     root@myserver.com:~# /etc/init.d/apache2 restart
     * Restarting web server apache2
-    
+
 ```
-
-
-
-
 
 ## Curl library
 
-
-
-    
     `sudo apt-get install php5-curl`
-
-
-
 
 ## Testing PHP config
 
-
 The document root of the default web site is /var/www. We will now create a small PHP file (info.php) in that directory and call it in a browser. The file will display lots of useful details about our PHP installation, such as the installed PHP version.
 
-    
     `vim /var/www/info.php`
-
 
 and we add this to the file
 

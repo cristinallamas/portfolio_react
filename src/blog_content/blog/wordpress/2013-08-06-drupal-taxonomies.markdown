@@ -8,10 +8,10 @@ slug: drupal-taxonomies
 title: Drupal Taxonomies
 wordpress_id: 96
 categories:
-- Drupal
+  - Drupal
 tags:
-- drupal
-- taxonomy
+  - drupal
+  - taxonomy
 ---
 
 [youtube=http://www.youtube.com/watch?v=Qmr2HW6CtJQ]

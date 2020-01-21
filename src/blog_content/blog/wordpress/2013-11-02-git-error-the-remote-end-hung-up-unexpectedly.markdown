@@ -8,14 +8,14 @@ slug: git-error-the-remote-end-hung-up-unexpectedly
 title: 'Git error: The remote end hung up unexpectedly'
 wordpress_id: 153
 categories:
-- Drupal
+  - Drupal
 tags:
-- clone
-- eof
-- error
-- git
-- git troubleshoot
-- index-pack
+  - clone
+  - eof
+  - error
+  - git
+  - git troubleshoot
+  - index-pack
 ---
 
 Problem:

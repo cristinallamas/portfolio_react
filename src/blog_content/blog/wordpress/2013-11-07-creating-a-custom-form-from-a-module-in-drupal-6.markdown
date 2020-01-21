@@ -8,17 +8,16 @@ slug: creating-a-custom-form-from-a-module-in-drupal-6
 title: Creating a custom form from a module in Drupal 6
 wordpress_id: 156
 categories:
-- Drupal
+  - Drupal
 tags:
-- custom form module
-- drupal 6
-- drupal hook
-- form
-- module
+  - custom form module
+  - drupal 6
+  - drupal hook
+  - form
+  - module
 ---
 
 # Permissions
-
 
 This will check if the user has permissions to view the form
 
@@ -28,10 +27,7 @@ This will check if the user has permissions to view the form
     }
 ```
 
-
-
 # Path
-
 
 What url will lead us to the form, useful to start it with 'admin' so non-admin users can't access it.
 
@@ -49,11 +45,7 @@ What url will lead us to the form, useful to start it with 'admin' so non-admin 
     }
 ```
 
-
-
 # Form
-
-
 
 ```php
     function myform_form() {
@@ -70,13 +62,8 @@ What url will lead us to the form, useful to start it with 'admin' so non-admin 
     }
 ```
 
-
-
 #  Validation
 
-
-
-    
 ```php
     function myForm_validate($node, &$form) {
       if (isset($node->end) && isset($node->start)) {

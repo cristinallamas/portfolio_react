@@ -8,9 +8,10 @@ slug: download-and-install-drupal-7-with-drush
 title: Download and Install Drupal 7 with drush
 wordpress_id: 176
 categories:
-- Drupal
+  - Drupal
 ---
+
 ```
-drush dl drupal  
+drush dl drupal
 drush site-install standard --account-name=admin --account-pass=admin --db-url=mysql://YourMySQLUser:YourPassword@localhost/YourMySQLDatabase
 ```

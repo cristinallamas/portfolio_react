@@ -8,18 +8,19 @@ slug: drupal-7-view-unset-read-more-link-attachment_after
 title: Drupal 7 View unset Read More link (attachment_after) programmatically
 wordpress_id: 245
 categories:
-- Development
-- Drupal
+  - Development
+  - Drupal
 tags:
-- drupal
-- views
+  - drupal
+  - views
 ---
+
 ```php
 function mymodule_views_post_build(&$view) {
       switch ($view->name) {
-        case 'my_view_name': 
-          $view->attachment_after = ''; 
-          unset($view->attachment_after); 
+        case 'my_view_name':
+          $view->attachment_after = '';
+          unset($view->attachment_after);
         break;
       }
     }

@@ -8,11 +8,11 @@ slug: remove-a-contrib-module-stylesheet-in-drupal-8-theme
 title: Remove a contrib module stylesheet in Drupal 8 theme
 wordpress_id: 296
 categories:
-- Drupal
+  - Drupal
 tags:
-- drupal8
-- performance
-- theming
+  - drupal8
+  - performance
+  - theming
 ---
 
 You'll need to add the following to your info.yml, yes, not to libraries.

@@ -8,17 +8,17 @@ slug: drupal-7-filtered-gallery-better-exposed-filters
 title: Drupal 7 Filtered Gallery (Better Exposed Filters)
 wordpress_id: 139
 categories:
-- Drupal
+  - Drupal
 post_format:
-- Video
+  - Video
 tags:
-- better exposed filters
-- drupal 7
-- filtered gallery
-- filtered image gallery
-- how to
-- image gallery
-- view
+  - better exposed filters
+  - drupal 7
+  - filtered gallery
+  - filtered image gallery
+  - how to
+  - image gallery
+  - view
 ---
 
 http://www.youtube.com/watch?v=2JP0_CxW1_I

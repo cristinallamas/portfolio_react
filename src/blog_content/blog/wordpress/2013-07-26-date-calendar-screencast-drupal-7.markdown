@@ -8,7 +8,7 @@ slug: date-calendar-screencast-drupal-7
 title: Date + Calendar Screencast (Drupal 7)
 wordpress_id: 89
 categories:
-- Drupal
+  - Drupal
 ---
 
 [blip.tv http://blip.tv/play/hKZtgqOvMgI]

@@ -8,24 +8,18 @@ slug: drupal-6-different-ways-of-adding-javascript-to-a-page
 title: 'Drupal 6: Different ways of adding JavaScript to a page'
 wordpress_id: 104
 categories:
-- Drupal
+  - Drupal
 tags:
-- drupal
+  - drupal
 ---
 
 REMEMBER
 
+- Always use drupal_add_js() as this lets Drupal handle it i.e. preprocess/cache it.
 
+- All of the examples assume your JS is in a script file, but you can also include an "inline" script by sending it as a string for the first argument, and setting the second to "inline" e.g. drupal_add_js('alert("Hello!")', 'inline');
 
-	
-  * Always use drupal_add_js() as this lets Drupal handle it i.e. preprocess/cache it.
-
-	
-  * All of the examples assume your JS is in a script file, but you can also include an "inline" script by sending it as a string for the first argument, and setting the second to "inline" e.g. drupal_add_js('alert("Hello!")', 'inline');
-
-	
-  * If your script is in your theme directory, you can use path_to_theme() and then the relative path from there (with a preceding slash) e.g. path_to_theme().'/js/myscript.js'
-
+- If your script is in your theme directory, you can use path_to_theme() and then the relative path from there (with a preceding slash) e.g. path_to_theme().'/js/myscript.js'
 
 **1) Add a script to all pages**
 a) using template.php

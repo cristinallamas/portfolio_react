@@ -8,22 +8,17 @@ slug: remove-unnecessary-css-in-drupal-6-7
 title: Remove unnecessary CSS in Drupal 6 & 7
 wordpress_id: 210
 categories:
-- Drupal
+  - Drupal
 tags:
-- css
-- drupal 6
-- drupal 7
-- theming
+  - css
+  - drupal 6
+  - drupal 7
+  - theming
 ---
 
 add the function to the template.php file in your theme folder
 
-
-
-
 ## Drupal 6
-
-
 
 ```php
     function mytheme_preprocess_page(&$vars){
@@ -36,20 +31,13 @@ add the function to the template.php file in your theme folder
     unset($css['all']['module']['sites/all/modules/custom/mymodule/mymodule.css']);
     //theme css
     unset($css['all']['theme']['sites/all/themes/mytheme/mytheme.css']);
-    
+
      $vars['styles'] = drupal_get_css($css);
     }
 ```
 
-
-
-
 ## Drupal 7
 
-
-
-
-    
     function mymodule_css_alter(&$css) {
       $exclude = array(
      //core

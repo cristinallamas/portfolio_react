@@ -8,13 +8,13 @@ slug: drupal-7-masonry
 title: Drupal 7 + Masonry
 wordpress_id: 120
 categories:
-- Drupal
+  - Drupal
 tags:
-- drupal 7
-- infinite scroll
-- masonry
-- theming
-- views
+  - drupal 7
+  - infinite scroll
+  - masonry
+  - theming
+  - views
 ---
 
 http://www.youtube.com/watch?v=UFS0tUJSMbQ

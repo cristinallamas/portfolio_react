@@ -8,19 +8,20 @@ slug: add-change-arguments-in-a-view-programmatically-drupal-6
 title: Add / Change arguments in a view programmatically (Drupal 6)
 wordpress_id: 228
 categories:
-- Drupal
+  - Drupal
 tags:
-- add
-- arguments
-- change
-- code
-- drupal
-- drupal hook
-- programmatically
-- views
-- views hook
-- views_pre_view
+  - add
+  - arguments
+  - change
+  - code
+  - drupal
+  - drupal hook
+  - programmatically
+  - views
+  - views hook
+  - views_pre_view
 ---
+
 ```php
 function hook_views_pre_view(&$view, &$display_id, &$args) {
         if ($view->name == 'your_view_name') {

@@ -8,13 +8,13 @@ slug: how-to-make-a-bootstrap-drupal-sub-theme
 title: How To Make A Bootstrap Drupal Sub Theme
 wordpress_id: 145
 categories:
-- Drupal
+  - Drupal
 tags:
-- bootstrap
-- drupal 7
-- how to
-- subtheme
-- theme
+  - bootstrap
+  - drupal 7
+  - how to
+  - subtheme
+  - theme
 ---
 
 http://www.youtube.com/watch?v=6SInIY5TJkQ

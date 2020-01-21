@@ -8,16 +8,14 @@ slug: how-to-create-features-and-add-components-with-drush-in-drupal
 title: How to create Features and add components with Drush in Drupal
 wordpress_id: 230
 categories:
-- Drupal
+  - Drupal
 tags:
-- drupal
-- drush
-- features
+  - drupal
+  - drush
+  - features
 ---
 
 # Creation
-
-
 
 ```
     drush fe --d --destination="sites/all/modules/custom"  my_feature views:my_view
@@ -37,37 +35,20 @@ features[views_view][] = my_view
 
 # Enable your Feature
 
-
-
-    
     ```drush cc all```
 
 
 
-    
+
     ```drush en my_feature```
-
-
-
 
 # Adding Components
 
-
 To see that components are available to add into your feature we'll run Feature Compile
 
-    
     `drush fc`
 
-
-
-
 If we get something like this:
-
-
-
-
-
-
 
 Available sources
 image:adaptive
@@ -75,19 +56,10 @@ image:thumbnail
 image:medium
 image:largeI could add into the .info file the following syntax.
 
-    
     `features[image][] = thumbnail`
-
-
-
 
 # Update the Feature
 
-
 via Drush using`drush fu`, short for `drush features-update`.
 
-    
     `drush --d fu my_feature`
-
-
-

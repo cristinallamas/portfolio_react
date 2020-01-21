@@ -8,11 +8,12 @@ slug: drupal-8-install-site-with-drush
 title: Drupal 8 install site with Drush
 wordpress_id: 273
 categories:
-- Drupal
+  - Drupal
 tags:
-- drupal 8
-- drush
+  - drupal 8
+  - drush
 ---
+
 ```bash
 drush site-install standard install_configure_form.site_default_country=FR my_profile_form.my_settings.key=value
 ```

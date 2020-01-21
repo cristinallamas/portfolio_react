@@ -8,13 +8,13 @@ slug: detect-url-route-change-in-reactjs
 title: Detect URL Route change in ReactJS
 wordpress_id: 299
 categories:
-- Development
+  - Development
 tags:
-- javascript
-- react
-- react-router
-- reactjs
-- router
+  - javascript
+  - react
+  - react-router
+  - reactjs
+  - router
 ---
 
 To detect a URL change in a single page React application you can use the following code snippet:
@@ -23,7 +23,7 @@ To detect a URL change in a single page React application you can use the follow
 import { withRouter } from 'react-router-dom';
 
 history.listen((location, action) => {
-console.log("on route change");
-// Do stuff.
-})
+  console.log('on route change');
+  // Do stuff.
+});
 ```

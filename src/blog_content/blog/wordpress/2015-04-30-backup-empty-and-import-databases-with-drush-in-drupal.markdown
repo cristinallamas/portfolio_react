@@ -8,38 +8,28 @@ slug: backup-empty-and-import-databases-with-drush-in-drupal
 title: Backup, Empty and Import databases with Drush in Drupal.
 wordpress_id: 239
 categories:
-- Drupal
+  - Drupal
 tags:
-- backup
-- database
-- db
-- drupal
-- drush
+  - backup
+  - database
+  - db
+  - drupal
+  - drush
 ---
 
 ## Create a backup.
-
-
 
 ```
 drush sql-dump > /path/to/folder/backup.sql
 ```
 
-
-
 ## Empty the database tables.
-
-
 
 ```
 drush sql-drop
 ```
 
-
-
 ## Import the tables.
-
-
 
 ```
 drush sql-cli < /path/to/folder/backup.sql

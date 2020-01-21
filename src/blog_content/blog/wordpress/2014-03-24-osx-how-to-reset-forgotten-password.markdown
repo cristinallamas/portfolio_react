@@ -8,26 +8,19 @@ slug: osx-how-to-reset-forgotten-password
 title: OSX  How to Reset forgotten mysql root password
 wordpress_id: 201
 categories:
-- Drupal
+  - Drupal
 tags:
-- mysql
-- osx
-- password
-- reset
-- sudo
+  - mysql
+  - osx
+  - password
+  - reset
+  - sudo
 ---
 
+1. we need to stop the mysql server `mysql.server stop`
 
-	
-  1. we need to stop the mysql server `mysql.server stop`
+2) `sudo /usr/local/mysql/bin/mysqld_safe --skip-grant-tables`
 
-	
-  2. `sudo /usr/local/mysql/bin/mysqld_safe --skip-grant-tables`
+3. from a different bash tab `/usr/local/mysql/bin/mysql mysql`
 
-	
-  3. from a different bash tab `/usr/local/mysql/bin/mysql mysql`
-
-	
-  4. Once we login in mysql we have to type `'UPDATE user SET Password=PASSWORD('yourpass') WHERE Host='localhost' AND User='root';'`
-
-
+4) Once we login in mysql we have to type `'UPDATE user SET Password=PASSWORD('yourpass') WHERE Host='localhost' AND User='root';'`

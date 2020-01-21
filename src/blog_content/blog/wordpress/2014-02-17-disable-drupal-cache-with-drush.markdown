@@ -8,35 +8,34 @@ slug: disable-drupal-cache-with-drush
 title: Disable Drupal cache with Drush
 wordpress_id: 182
 categories:
-- Drupal
+  - Drupal
 tags:
-- advagg
-- cache
-- clear cache
-- command line
-- disable
-- drupal
-- drush
-- memcache
+  - advagg
+  - cache
+  - clear cache
+  - command line
+  - disable
+  - drupal
+  - drush
+  - memcache
 ---
+
 ```
 drush vset cache 0
-    
+
 drush vset preprocess_css 0
-    
+
 drush vset preprocess_js 0
 ```
- 
 
 Disable advagg and memcache if you have it enabled
 
-``` 
+```
 drush dis -y advagg
 
 drush dis -y memcache
 ```
-Finally we clear all the cache.
-    
-`drush cc all`
 
- 
+Finally we clear all the cache.
+  
+`drush cc all`

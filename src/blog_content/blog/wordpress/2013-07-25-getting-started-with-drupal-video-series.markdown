@@ -8,17 +8,15 @@ slug: getting-started-with-drupal-video-series
 title: Getting Started With Drupal 6 (video series)
 wordpress_id: 83
 categories:
-- Drupal
+  - Drupal
 tags:
-- drupal
-- how to
-- junior
-- starting
-- tutorial
-- videos
+  - drupal
+  - how to
+  - junior
+  - starting
+  - tutorial
+  - videos
 ---
-
- 
 
 # _Taken from https://drupal.org/node/369988_
 

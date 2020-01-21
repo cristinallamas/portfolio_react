@@ -8,23 +8,23 @@ slug: install-compass-in-osx-el-capitan
 title: Install Compass in OSX El Capitan
 wordpress_id: 276
 categories:
-- OS X
-- SysAdmin
+  - OS X
+  - SysAdmin
 tags:
-- compass
-- el capitan
-- gem
-- osx
-- ruby
-- sass
+  - compass
+  - el capitan
+  - gem
+  - osx
+  - ruby
+  - sass
 ---
 
 After getting this error:
 
- ```bash   
+```bash
 ▶ sudo gem install compass
 ERROR: While executing gem ... (Errno::EPERM)
-    Operation not permitted - /usr/bin/sass
+   Operation not permitted - /usr/bin/sass
 ```
 
 It can be fixed with:

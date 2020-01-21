@@ -8,7 +8,7 @@ slug: how-to-divide-watchdog-logs-depending-on-type
 title: How to divide watchdog logs depending on type in Drupal 6
 wordpress_id: 21
 categories:
-- Development
+  - Development
 ---
 
 Let's say we want to redirect the php errors inside watchdog to php_error.log and the rest to drupal.log.
@@ -27,16 +27,8 @@ restore_error_handler();
 }
 ```
 
-
-
-
-
 or if you have the module **Devel** installed you only need to go to /admin/settings/devel
 
-
-
 and select NONE in the Error handler section.
-
-
 
 [![Screen Shot 2013-07-16 at 17.10.07](http://cristinallamas.files.wordpress.com/2013/07/screen-shot-2013-07-16-at-17-10-07.png?w=300)](http://cristinallamas.files.wordpress.com/2013/07/screen-shot-2013-07-16-at-17-10-07.png)

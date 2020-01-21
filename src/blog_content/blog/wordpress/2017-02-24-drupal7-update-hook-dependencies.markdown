@@ -8,20 +8,19 @@ slug: drupal7-update-hook-dependencies
 title: Drupal7 update hook dependencies
 wordpress_id: 282
 categories:
-- Development
-- Drupal
+  - Development
+  - Drupal
 tags:
-- drupal
-- drupal 7
-- module
-- module development
-- update dependencies
-- update hook
+  - drupal
+  - drupal 7
+  - module
+  - module development
+  - update dependencies
+  - update hook
 ---
 
 You sometimes find that update hooks run in an unwanted order that affects their behaviour or creates errors and makes your site crash. You can override this and specify the order that you want with the following hook in your .install file.
 
-    
 ```php
 function new_module_update_dependencies() {
   // Run new_module update after old_module update.

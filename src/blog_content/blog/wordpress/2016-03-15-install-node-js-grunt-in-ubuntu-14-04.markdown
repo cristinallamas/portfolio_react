@@ -8,53 +8,37 @@ slug: install-node-js-grunt-in-ubuntu-14-04
 title: Install Node.js & Grunt in Ubuntu 14.04
 wordpress_id: 258
 categories:
-- Drupal
+  - Drupal
 ---
 
 # First you need to add this for [add-apt-repository](http://manpages.ubuntu.com/manpages/natty/man1/add-apt-repository.1.html) command to work:
 
-
-
-```bash  
+```bash
     $ apt-get install software-properties-common
 ```
 
-
-
-
 ## If not you'll get this error:
-
-
 
 ```bash
     $ sudo: add-apt-repository: command not found
 ```
 
-
-
-
 # Install Node
-
-
 
 ```
     $ sudo add-apt-repository ppa:chris-lea/node.js
 
 
-    
+
     $ sudo apt-get update
 
 
 
-    
+
     $ sudo apt-get install nodejs
 ```
 
-
-
 # Install Grunt
-
-
 
 ```
     $ sudo npm install -g grunt-cli

@@ -8,7 +8,5 @@ slug: mac-os-x-mavericks-downgrade-php-5-4-to-5-3-for-drupal-6
 title: Mac OS X ( Mavericks ) downgrade PHP 5.4 to 5.3 for drupal 6
 wordpress_id: 205
 categories:
-- Drupal
+  - Drupal
 ---
-
-

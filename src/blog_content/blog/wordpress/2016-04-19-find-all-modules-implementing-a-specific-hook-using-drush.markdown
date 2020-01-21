@@ -8,12 +8,11 @@ slug: find-all-modules-implementing-a-specific-hook-using-drush
 title: Find all modules implementing a specific hook using drush
 wordpress_id: 260
 categories:
-- Drupal
+  - Drupal
 tags:
-- drupal 7
+  - drupal 7
 ---
+
 ```html
 <span class="s1">drush fnh anyHookName</span>
 ```
-
-

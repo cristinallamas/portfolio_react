@@ -15,8 +15,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
   if (node.internal.type === `WorkJson`) {
     const value = createFilePath({ node, getNode }) + node.uid;
-    console.log(node);
-
     createNodeField({
       name: `slug`,
       node,
@@ -108,11 +106,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const workPages = workPageQueryResult.data.allWorkJson.edges;
 
   workPages.forEach((workItem, index) => {
-    // const previous =
-    //   index === posts.length - 1 ? null : posts[index + 1].node;
-    // const next = index === 0 ? null : posts[index - 1].node;
-    console.log(workItem.node);
-
     createPage({
       path: workItem.node.fields.slug,
       component: workPage,
@@ -120,8 +113,6 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: workItem.node.fields.slug,
         node: workItem.node,
         UID: workItem.node.uid, // passing it to the query
-        // previous,
-        // next,
       },
     });
   });

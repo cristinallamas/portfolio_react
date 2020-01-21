@@ -8,15 +8,15 @@ slug: how-to-force-a-webform-to-be-an-admin-page-drupal-6
 title: How to force a Webform to be an admin page (Drupal 6)
 wordpress_id: 122
 categories:
-- Development
-- Drupal
+  - Development
+  - Drupal
 tags:
-- admin page
-- drupal 6
-- hook_form_alter
-- hook_init
-- hook_menu
-- webform
+  - admin page
+  - drupal 6
+  - hook_form_alter
+  - hook_init
+  - hook_menu
+  - webform
 ---
 
 I've created a WebForm and I've been modifying it with hook_form_alter inside a custom module. Another thing I wanted to do is make the page be an admin page, I did changed the path to 'admin/mypath' but it didn't worked.The solution I've come with is divided in two parts:
@@ -38,9 +38,9 @@ I've created a WebForm and I've been modifying it with hook_form_alter inside a 
 
 ```php
 
-    function mymodule_nodeapi (&$node, $op){ 
-    // Load the currently logged in user. 
-    global $user; 
+    function mymodule_nodeapi (&$node, $op){
+    // Load the currently logged in user.
+    global $user;
     if($node->path == 'admin/mypath' && $op == 'view'){
     if(user_is_anonymous()){
      drupal_access_denied();

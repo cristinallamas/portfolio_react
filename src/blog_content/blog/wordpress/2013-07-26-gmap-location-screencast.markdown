@@ -8,13 +8,10 @@ slug: gmap-location-screencast
 title: GMap + Location Screencast
 wordpress_id: 86
 categories:
-- Drupal
+  - Drupal
 ---
 
 [blip.tv http://blip.tv/play/hKZt_bwhAg]
-
-
-
 
 Drupal can store and display geographic information through the use of the contributed modules called GMap and Location, part of the geocoding module stack known as Mapadelic. Together they form the foundation of building rich maps using Google's map service.
 

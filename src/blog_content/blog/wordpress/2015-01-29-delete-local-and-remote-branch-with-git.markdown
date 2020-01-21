@@ -8,20 +8,14 @@ slug: delete-local-and-remote-branch-with-git
 title: Delete local and remote branch with Git
 wordpress_id: 237
 categories:
-- Drupal
+  - Drupal
 tags:
-- git
+  - git
 ---
 
 ## Delete a branch in your local environment
 
-
-
-
 `git branch -D <branchName>`
-
-
-
 
 ## Delete a branch from the remote repository
 
