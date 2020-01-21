@@ -44,7 +44,7 @@
   },
   "scripts": {
     "dev": "gatsby develop -p 3333 -o",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -p 80",
     "build": "gatsby build",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint 'src/**/*.{js,jsx}' --quiet"
