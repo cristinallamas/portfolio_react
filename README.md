@@ -1,28 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# <#< repository.name >#>
 
-## Introduction
+A portfolio using structured content and a static site builder.
 
-This is a personal project to get to know some aspects of React and GraphQL.
+Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-gatsby-portfolio).
 
-Continuous deployment with [Netlify](http://www.netlify.com) at [cristinallamas.netlify.com](http://cristinallamas.netlify.com).
+## What you have
 
-Styleguide in [https://cristinallamas.netlify.com/storybook/](https://cristinallamas.netlify.com/storybook/)
+- A blazing fast portfolio with [Gatsby.js](https://gatsbyjs.org)
+- Structured content using [Sanity.io](https://www.sanity.io)
+- Global deployment on [Netlify](https://netlify.com)
 
-## Components
+## Quick start
 
-Following Brad Frost's Atomic design approach, the components will be divided into:
+1. Clone this repository from your GitHub account
+2. `npm install` in the project root folder on local
+3. `npm run dev` to start the Studio and frontend locally
+   - Your Studio should be running on [http://localhost:3333](http://localhost:3333)
+   - Your frontend should be running on [http://localhost:8000](http://localhost:8000)
+4. `npm run build` to build to production locally
 
-- Atoms are UI elements that can’t be broken down any further and serve as the elemental building blocks of an interface.
-- Molecules are collections of atoms that form relatively simple UI components.
-- Organisms are relatively complex components that form discrete sections of an interface.
-- Templates place components within a layout and demonstrate the design’s underlying content structure.
-- Pages apply real content to templates and articulate variations to demonstrate the final UI and test the resilience of the design system.
+## Enable real-time content preview in development
 
-## Roadmap
+1. Go to your [project’s API settings on manage.sanity.io](https://manage.sanity.io/projects/<#< sanity.projectId >#>/settings/api) and create a token with read rights.
+2. Copy `.env.development.template` to `.env.development` and paste in the token: `SANITY_READ_TOKEN="yourTokenHere"`.
+3. Restart the development server (`ctrl + C` and `npm run dev`).
 
-- [x] Read Data from local JSON file
-- [x] React Components
-- [ ] Style Guide (Storybook chosen)
-- [ ] Styling (styled-components chosen)
-- [ ] Data source from GraphQL
-- [ ] AWS / Headless CMS
+If you want to disable the preview you can set `watchMode: false` in gatsby-config.js. If you just want to preview published changes you can set `overlayDrafts: false` in gatsby-config.js.
+
+## Deploy changes
+
+Netlify automatically deploys new changes commited to the `master` branch on GitHub. If you want to change the deployment branch you may do so in [build & deploy settings on Netlify](https://www.netlify.com/docs/continuous-deployment/#branches-deploys).
+
+## Get help
+
+[![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
+
+Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on twitter](https://twitter.com/sanity_io).
