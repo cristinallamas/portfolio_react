@@ -1,57 +1,20 @@
 {
-  "name": "portfolio_react",
-  "version": "0.1.0",
   "private": true,
-  "license": "UNLICENSED",
-  "author": "Cristina Llamas",
-  "dependencies": {
-    "@storybook/preset-create-react-app": "^1.2.0",
-    "classnames": "^2.2.6",
-    "is-url-external": "^1.0.3",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
-    "styled-components": "^4.3.2",
-    "styled-system": "^5.0.16"
-  },
+  "name": "sanity-gatsby-portfolio",
+  "version": "0.0.0",
   "scripts": {
-    "start": "react-scripts start",
-    "netlify-redirect": "cp _redirects build/_redirects",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook",
-    "build-storybook": "build-storybook -c .storybook -o public/storybook",
-    "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint 'src/**/*.{js,jsx}' --quiet"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "build": "lerna run build --parallel",
+    "dev": "lerna run dev --parallel",
+    "format": "lerna run format",
+    "build-studio": "(cd studio && npm run build)",
+    "build-web": "lerna bootstrap && (cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
+    "graphql-deploy": "lerna run graphql-deploy",
+    "lint": "lerna run lint",
+    "postinstall": "lerna bootstrap",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@storybook/react": "^5.3.0-alpha.45",
-    "babel-plugin-react-css-modules": "^5.2.6",
-    "eslint-config-prettier": "^6.2.0",
-    "eslint-loader": "^3.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "husky": "^3.0.5",
-    "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.1"
+    "husky": "^4.2.5",
+    "lerna": "^3.13.1"
   }
 }
