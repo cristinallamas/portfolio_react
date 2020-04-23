@@ -1,0 +1,22 @@
+---
+author: cristinallamas
+comments: true
+date: 2014-12-30 09:53:19+00:00
+layout: post
+link: https://cristinallamas.wordpress.com/2014/12/30/2014-in-review/
+slug: 2014-in-review
+title: 2014 in review
+wordpress_id: 235
+categories:
+  - Drupal
+---
+
+The WordPress.com stats helper monkeys prepared a 2014 annual report for this blog.
+
+[![](//s0.wp.com/wp-content/mu-plugins/annual-reports/img/2014-emailteaser.png)](http://cristinallamas.wordpress.com/2014/annual-report/)
+
+Here's an excerpt:
+
+<blockquote>The concert hall at the Sydney Opera House holds 2,700 people. This blog was viewed about **9,700** times in 2014. If it were a concert at Sydney Opera House, it would take about 4 sold-out performances for that many people to see it.</blockquote>
+
+[Click here to see the complete report.](http://cristinallamas.wordpress.com/2014/annual-report/)
