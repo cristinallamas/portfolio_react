@@ -13,6 +13,18 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Cristina Llamas | FullStack Developer`,
+        short_name: `Cristina Llamas`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`
+      }
+    },
     {
       resolve: 'gatsby-source-sanity',
       options: {
@@ -26,6 +38,15 @@ module.exports = {
       resolve: `gatsby-transform-portable-text`,
       options: {
         extendTypes: [{typeName: `SanityBlogPost`, contentFieldName: 'body'}]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GATSBY_GA_TRACKING_ID,
+        // this option places the tracking script into the head of the DOM
+        head: true
+        // other options
       }
     }
   ]
