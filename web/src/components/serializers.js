@@ -1,15 +1,12 @@
 import Figure from './figure'
 // const BlockContent = require('@sanity/block-content-to-react')
-import React from 'react'
+// import React from 'react'
+import Code from './code'
 
 const serializers = {
   types: {
     figure: Figure,
-    code: props => (
-      <pre data-language={props.node.language}>
-        <code>{props.node.code}</code>
-      </pre>
-    )
+    code: Code
   }
 }
 
