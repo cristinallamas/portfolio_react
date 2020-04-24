@@ -1,0 +1,15 @@
+.container {
+  margin: 3rem auto;
+  border-radius: 0.5rem;
+  transition: transform 100ms ease-in-out;
+  max-width: 600px;
+  overflow: scroll;
+}
+
+.container:hover {
+  transform: rotate3d(0, 0, 0, 0deg) rotateZ(0deg);
+}
+
+.container > * {
+  border-radius: 0.5rem;
+}
