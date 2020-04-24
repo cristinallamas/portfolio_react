@@ -91,6 +91,7 @@ async function createBlogPostPages (graphql, actions, reporter) {
         edges {
           node {
             id
+            readingTimeInMinutes
             publishedAt
             slug {
               current
@@ -106,16 +107,18 @@ async function createBlogPostPages (graphql, actions, reporter) {
   const postEdges = (result.data.allSanityBlogPost || {}).edges || []
 
   postEdges.forEach((edge, index) => {
-    const {id, slug = {}, publishedAt} = edge.node
+    const {id, slug = {}, publishedAt, readingTimeInMinutes} = edge.node
     const dateSegment = format(publishedAt, 'YYYY/MM')
     const path = `/blog/${dateSegment}/${slug.current}/`
 
     reporter.info(`Creating blog post page: ${path}`)
-
     createPage({
       path,
       component: require.resolve('./src/templates/blog-post.js'),
-      context: {id}
+      context: {
+        id,
+        readingTimeInMinutes
+      }
     })
   })
 }

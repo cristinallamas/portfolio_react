@@ -21,6 +21,12 @@ module.exports = {
         watchMode: !isProd,
         overlayDrafts: !isProd && token
       }
+    },
+    {
+      resolve: `gatsby-transform-portable-text`,
+      options: {
+        extendTypes: [{typeName: `SanityBlogPost`, contentFieldName: 'body'}]
+      }
     }
   ]
 }

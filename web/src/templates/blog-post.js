@@ -15,6 +15,7 @@ export const query = graphql`
         _id
         title
       }
+      readingTimeInMinutes
       mainImage {
         crop {
           _key

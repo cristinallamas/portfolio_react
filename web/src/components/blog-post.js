@@ -10,10 +10,10 @@ import serializers from './serializers'
 import styles from './blog-post.module.css'
 
 function BlogPost (props) {
-  const {_rawBody, categories, title, mainImage, publishedAt} = props
+  const {_rawBody, categories, title, mainImage, publishedAt, readingTimeInMinutes} = props
   return (
     <article className={styles.root}>
-      {mainImage && mainImage.asset && (
+      {/* {mainImage && mainImage.asset && (
         <div className={styles.mainImage}>
           <img
             src={imageUrlFor(buildImageObj(mainImage))
@@ -24,7 +24,7 @@ function BlogPost (props) {
             alt={mainImage.alt}
           />
         </div>
-      )}
+      )} */}
       <Container>
         <div className={styles.grid}>
           <div className={styles.mainContent}>
@@ -37,8 +37,15 @@ function BlogPost (props) {
                 {differenceInDays(new Date(publishedAt), new Date()) > 3
                   ? distanceInWords(new Date(publishedAt), new Date())
                   : format(new Date(publishedAt), 'MMMM Do YYYY')}
+                {readingTimeInMinutes && (
+                  <React.Fragment>
+                    <br />
+                    Reading time: {readingTimeInMinutes} mins
+                  </React.Fragment>
+                )}
               </div>
             )}
+
             {categories && (
               <div className={styles.categories}>
                 <h3 className={styles.categoriesHeadline}>Categories</h3>
