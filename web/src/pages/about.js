@@ -1,19 +1,13 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-// import {
-//   mapEdgesToNodes,
-//   filterOutDocsWithoutSlugs,
-//   filterOutDocsPublishedInTheFuture
-// } from '../lib/helpers'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import {imageUrlFor} from '../lib/image-url'
-import {buildImageObj} from '../lib/helpers'
-import BlockContent from '../components/block-content'
 import {responsiveTitle1} from '../components/typography.module.css'
+import ImageText from '../components/image-text'
 
+import BlockContent from '../components/block-content'
 export const query = graphql`
   query AboutPageQuery {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
@@ -66,7 +60,6 @@ export const query = graphql`
 
 const AboutPage = props => {
   const {data, errors} = props
-  // console.log(data)
 
   if (errors) {
     return (
@@ -89,23 +82,13 @@ const AboutPage = props => {
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
         <h1 className={responsiveTitle1}>{site.title}</h1>
-
         <h2>{site.subtitle}</h2>
-        {/* {site.bioPic && site.bioPic.asset && (
-          <img
-            src={imageUrlFor(buildImageObj(site.bioPic))
-              .width(600)
-              .height(Math.floor((9 / 16) * 600))
-              .url()}
-            alt={site.bioPic.alt}
-          />
-        )} */}
-
-        {site._rawBiography && <BlockContent blocks={site._rawBiography || []} />}
-
-        <a href={site.cv.asset.path} download='Cristina-Llamas-CV'>
-          Download my CV
-        </a>
+        <ImageText image={site.bioPic}>
+          {site._rawBiography && <BlockContent blocks={site._rawBiography || []} />}
+          <a href={site.cv.asset.path} download='Cristina-Llamas-CV'>
+            Download my CV
+          </a>
+        </ImageText>
       </Container>
     </Layout>
   )

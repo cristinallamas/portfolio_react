@@ -1,0 +1,32 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+
+  @media (--media-min-medium) {
+    flex-direction: row;
+  }
+}
+.imageWrapper {
+  @media (--media-min-medium) {
+    padding: 1em 1em 0 0;
+  }
+}
+.image {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  @media (--media-min-medium) {
+    width: auto;
+  }
+}
+.text {
+  @media (--media-min-medium) {
+    padding: 0em 1em;
+  }
+}
