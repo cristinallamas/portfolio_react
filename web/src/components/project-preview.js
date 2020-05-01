@@ -9,7 +9,6 @@ import {responsiveTitle3} from './typography.module.css'
 
 function ProjectPreview (props) {
   let pageType = ''
-  console.log(props['_type'])
   switch (props['_type']) {
     case 'sideProject':
       pageType = 'experiment'

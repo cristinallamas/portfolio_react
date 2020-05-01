@@ -20,6 +20,7 @@ module.exports = {
         name: `Cristina Llamas | FullStack Developer`,
         short_name: `Cristina Llamas`,
         start_url: `/`,
+        icon: `src/icons/favicon.ico`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`

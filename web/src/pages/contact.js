@@ -1,22 +1,7 @@
 import React from 'react'
-import {graphql} from 'gatsby'
-// import {
-//   mapEdgesToNodes,
-//   filterOutDocsWithoutSlugs,
-//   filterOutDocsPublishedInTheFuture
-// } from '../lib/helpers'
 import Container from '../components/container'
-import GraphQLErrorList from '../components/graphql-error-list'
-import SEO from '../components/seo'
+// import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import {imageUrlFor} from '../lib/image-url'
-import {buildImageObj} from '../lib/helpers'
-
-// export const query = graphql`
-//   query ContactPageQuery {
-
-//   }
-// `
 
 const ContactPage = props => {
   // const {data, errors} = props

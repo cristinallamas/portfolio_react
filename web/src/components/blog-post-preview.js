@@ -1,14 +1,11 @@
 import {Link} from 'gatsby'
 import React from 'react'
-import {buildImageObj, cn, getBlogUrl} from '../lib/helpers'
-import {imageUrlFor} from '../lib/image-url'
-import BlockText from './block-text'
+import {cn, getBlogUrl} from '../lib/helpers'
 import {format} from 'date-fns'
 import styles from './blog-post-preview.module.css'
 import {responsiveTitle3} from './typography.module.css'
 
 function BlogPostPreview (props) {
-  console.log(props)
   return (
     <Link className={styles.root} to={getBlogUrl(props.publishedAt, props.slug.current)}>
       {/* <div className={styles.leadMediaThumb}>

@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { buildImageObj } from '../../lib/helpers'
-import { imageUrlFor } from '../../lib/image-url'
+import React, {useState} from 'react'
+import {buildImageObj} from '../../lib/helpers'
+import {imageUrlFor} from '../../lib/image-url'
 
 import styles from './slideshow.module.css'
 
@@ -30,7 +30,7 @@ function Slideshow (props) {
       <ul
         className={styles.carousel}
         data-index={index}
-        style={{ transform: `translate3d(${index * -100}%, 0, 0)` }}
+        style={{transform: `translate3d(${index * -100}%, 0, 0)`}}
       >
         {props.slides.map(slide => (
           <li key={slide._key} className={styles.slide}>

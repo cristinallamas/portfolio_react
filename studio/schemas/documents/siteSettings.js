@@ -53,14 +53,12 @@ export default {
       type: 'figure',
       title: 'Bio Image',
       fieldset: 'bio'
-
     },
     {
       title: 'CV',
       name: 'cv',
       type: 'file',
       fieldset: 'bio'
-
     }
     // {
     //   name: 'author',

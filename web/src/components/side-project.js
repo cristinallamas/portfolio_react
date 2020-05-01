@@ -1,6 +1,4 @@
-import {format, distanceInWords, differenceInDays} from 'date-fns'
 import React from 'react'
-import {Link} from 'gatsby'
 import {buildImageObj} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
 import BlockContent from './block-content'
@@ -10,7 +8,7 @@ import Container from './container'
 import styles from './project.module.css'
 
 function SideProject (props) {
-  const {_rawBody, title, categories, mainImage, members, relatedProjects} = props
+  const {_rawBody, title, categories, mainImage} = props
   return (
     <article className={styles.root}>
       {props.mainImage && mainImage.asset && (
