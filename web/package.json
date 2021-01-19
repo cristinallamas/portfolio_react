@@ -44,13 +44,6 @@
     "postcss-preset-env": "^6.6.0",
     "prettier-eslint-cli": "^4.7.1",
     "rimraf": "^2.6.3"
-  },
-  { 
-    "husky": { 
-      "hooks": { 
-        "pre-commit": "pretty-quick --staged" 
-        } 
-    } 
   }
 
 }

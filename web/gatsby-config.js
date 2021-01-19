@@ -10,24 +10,24 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   plugins: [
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-remove-trailing-slashes',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-remove-trailing-slashes",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-offline",
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `Cristina Llamas | FullStack Developer`,
+    //     short_name: `Cristina Llamas`,
+    //     start_url: `/`,
+    //     icon: `src/icons/favicon.ico`,
+    //     background_color: `#f7f0eb`,
+    //     theme_color: `#a2466c`,
+    //     display: `standalone`
+    //   }
+    // },
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Cristina Llamas | FullStack Developer`,
-        short_name: `Cristina Llamas`,
-        start_url: `/`,
-        icon: `src/icons/favicon.ico`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
-        display: `standalone`
-      }
-    },
-    {
-      resolve: 'gatsby-source-sanity',
+      resolve: "gatsby-source-sanity",
       options: {
         ...clientConfig.sanity,
         token,
@@ -38,7 +38,7 @@ module.exports = {
     {
       resolve: `gatsby-transform-portable-text`,
       options: {
-        extendTypes: [{typeName: `SanityBlogPost`, contentFieldName: 'body'}]
+        extendTypes: [{ typeName: `SanityBlogPost`, contentFieldName: "body" }]
       }
     },
     {
@@ -51,4 +51,4 @@ module.exports = {
       }
     }
   ]
-}
+};

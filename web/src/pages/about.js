@@ -17,11 +17,14 @@ export const query = graphql`
       subtitle
       cv {
         asset {
+          _id
+          path
           source {
             url
             name
           }
-          path
+          title
+          url
         }
       }
       biography {
@@ -76,7 +79,7 @@ const AboutPage = props => {
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
     )
   }
-
+console.log(site.cv);
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
@@ -85,13 +88,13 @@ const AboutPage = props => {
         <h2>{site.subtitle}</h2>
         <ImageText image={site.bioPic}>
           {site._rawBiography && <BlockContent blocks={site._rawBiography || []} />}
-          <a href={site.cv.asset.path} download='Cristina-Llamas-CV'>
+          <a href={site.cv.asset.url} download="Cristina-Llamas-CV">
             Download my CV
           </a>
         </ImageText>
       </Container>
     </Layout>
-  )
+  );
 }
 
 export default AboutPage

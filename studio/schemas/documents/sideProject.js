@@ -63,7 +63,10 @@ export default {
       name: 'relatedProjects',
       title: 'Related projects',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'sideProject'}}]
+      of: [{type: 'reference',to: [
+        {type: 'person'},
+        {type: 'bovinae'}
+      ]}]
     }
   ],
   preview: {
